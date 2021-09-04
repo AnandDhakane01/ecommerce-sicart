@@ -26,7 +26,7 @@ const Account = () => {
   }, []);
   return (
     <>
-      <NavigationBar></NavigationBar>
+    <NavigationBar/>
       <div class='container emp-profile'>
         <form method='post'>
           <div class='row'>

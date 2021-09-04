@@ -9,9 +9,6 @@ const CartPage = () => {
   const [products, setproducts] = useState([]);
   const [reload, setreload] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [orderSuccess, setOrderSuccess] = useState(false);
-
-
 
   useEffect(() => {
     setproducts(loadCart());
@@ -29,19 +26,19 @@ const CartPage = () => {
 
   return (
     <div>
-      <NavigationBar></NavigationBar>
-      <h1 className="bagMoh">Your Bag</h1>
-      <div className="containerMoh">
-        <div className="pageMoh">
-          <div className="gridMoh">
-            <div className="detailsMoh">
-              <span className="tbl productsMoh">Products</span>
-              <span className="tbl descpMoh">Description</span>
-              <span className="tbl priceMoh">Price</span>
-              <span className="tbl deleteMoh">Delete</span>
-              <hr className="line1Moh"></hr>
-              {products && products.length ? (
-                products.map((product) => {
+      <NavigationBar />
+      {products && products.length ? <h1 className="bagMoh">Your Bag</h1> : ""}
+      {products && products.length ? (
+        <div className="containerMoh">
+          <div className="pageMoh">
+            <div className="gridMoh">
+              <div className="detailsMoh">
+                <span className="tbl productsMoh">Products</span>
+                <span className="tbl descpMoh">Description</span>
+                <span className="tbl priceMoh">Price</span>
+                <span className="tbl deleteMoh">Delete</span>
+                <hr className="line1Moh"></hr>
+                {products.map((product) => {
                   return (
                     <div>
                       <ItemCard
@@ -52,21 +49,20 @@ const CartPage = () => {
                       ></ItemCard>
                     </div>
                   );
-                })
-              ) : (
-                <h1>Cart is empty</h1>
-              )}
-            </div>
-            {products && products.length && (
+                })}
+              </div>
               <Order
                 totalPrice={totalPrice * 70}
                 numberOfProducts={products.length}
-                setproducts={setproducts}
               />
-            )}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="d-flex justify-content-center mt-5">
+          <h1>Cart is empty</h1>
+        </div>
+      )}
     </div>
   );
 };

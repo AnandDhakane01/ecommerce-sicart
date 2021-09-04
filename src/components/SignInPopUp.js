@@ -36,7 +36,7 @@ const SignInPopUp = () => {
         <button className='btn-rounded' onClick={signIn}>
           <div className='img1'>
             {" "}
-            <img src='https://img.icons8.com/color/48/000000/google-logo.png' />
+            <img src='https://img.icons8.com/color/48/000000/google-logo.png' alt=""/>
           </div>
           <div className='titles'>Sign In with Google</div>
         </button>

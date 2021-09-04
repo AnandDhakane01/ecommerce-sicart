@@ -5,7 +5,6 @@ const images = [{id:1,img:"/images/slider2.png"},
                 {id:4,img:"/images/slider5.png"},
                 {id:5,img:"/images/slider6.jpg"},
                 {id:6,img:"/images/slider7.jpg"},]
-                // {id:7,img:"/images/slider2.png"}]
 function Slider() {
 
     return (
@@ -14,7 +13,7 @@ function Slider() {
         <Carousel showThumbs={false} autoPlay autoFocus={true} infiniteLoop className="carousel">
         {images.map((image)=>
                 <div className="img1" key={image.id}>
-                    <img src={image.img}></img>
+                    <img src={image.img} alt=""></img>
                 </div>
            
         )}

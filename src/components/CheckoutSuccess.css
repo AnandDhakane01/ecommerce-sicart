@@ -1,0 +1,26 @@
+
+.s-btn {
+    border: 1px solid grey;
+    background-color: white;
+}
+
+.s-btn:hover {
+    background-color: #0d6efd;
+    color: white;
+    border: 1px solid #0d6efd;
+}
+
+.card-container {
+    margin-top: 20vh;
+    align-items: center;
+}
+
+.in-container {
+    max-width: 1000px;
+}
+
+.check-icon {
+    height: 45px;
+    width: 45px;
+    margin-bottom: 20px;
+}

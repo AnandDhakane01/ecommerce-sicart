@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Route, Redirect } from "react-router";
+import { Redirect } from "react-router";
 import "./button.css";
-import { cartEmpty } from "./cart_helper"
+import { cartEmpty } from "./cart_helper";
 
 function Order(props) {
-  const { totalPrice, numberOfProducts, setproducts } = props;
+  const { totalPrice, numberOfProducts } = props;
   const [redirect, setRedirect] = useState(false);
   const shipping = 50;
 
@@ -14,11 +14,10 @@ function Order(props) {
     }
   };
 
-
   const handleClick = () => {
     console.log("in handle click");
     cartEmpty(() => {
-    setRedirect(true);
+      setRedirect(true);
     });
   };
 

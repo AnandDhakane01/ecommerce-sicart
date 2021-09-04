@@ -1,14 +1,18 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home.js";
 import ProductPage from "./components/ProductPage.js";
 import ShopPage from "./components/shopPage";
 import Account from "./components/Account";
 import CartPage from "./components/cartPage/CartPage";
-import CheckoutSuccess from "./components/CheckoutSuccess.jsx";
-
+import CheckoutSuccess from "./components/CheckoutSuccess.js";
+import NavigationBar from "./components/NavigationBar.js";
 import "./App.css";
+import { useEffect } from "react";
+
+
 function App() {
+
   return (
     <Router>
       <Switch>

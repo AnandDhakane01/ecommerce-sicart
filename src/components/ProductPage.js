@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/productPage.css";
 import styled from "styled-components";
-import NavigationBar from "./NavigationBar";
 import { Redirect, useParams } from "react-router-dom";
 import Data from "../data/productData";
 import { addItemToCart } from "./cartPage/cart_helper";
+import NavigationBar from "./NavigationBar";
+
 const data = {
   img: "https://images.unsplash.com/photo-1629473728190-c9a984fed794?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1864&q=80",
   title: "Pastel Jacket With Bejewelled Collar",
@@ -13,6 +14,7 @@ const data = {
   description:
     "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
 };
+
 function ProductPage() {
   const { id } = useParams();
   const [counter, setCounter] = useState(1);
@@ -49,7 +51,6 @@ function ProductPage() {
   return (
     <>
       {getaRedirect(redirect)}
-      <NavigationBar></NavigationBar>
       <Container>
         <div className='d-lg-flex justify-content-center product-page'>
           <div className='product-image'>

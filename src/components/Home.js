@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import NavigationBar from "./NavigationBar";
 import Slider from "./Slider";
 import DATA from "../data/productData";
 import Card from "./Card";
+import NavigationBar from "./NavigationBar";
 
 const Home = () => {
   return (
     <>
+      <NavigationBar/>
       <Container>
-        <NavigationBar></NavigationBar>
         <Slider></Slider>
       </Container>
 
